@@ -2,6 +2,7 @@ import digging
 import canplacedestroy
 import debugmode
 from debugmode import *
+import strongholdfinder
 import colorama
 from colorama import Fore, Back, Style
 colorama.init()
@@ -22,6 +23,7 @@ def menu():
     print(b + "1. Area Block Counter - Count blocks from a given area.")
     print(b + "2. Mineshaft mirror - Find another mineshaft by finding a mineshaft.")
     print(b + "3. CanPlaceOn&CanDestroy - Command generator to give item that can destroy/be place on specific block.")
+    print(b + "4. Stronghold Finder - Find stronghold, require 2 Ender eye.")
     print(c + "Write 'list' to open this list.")
     s = True
     while s:
@@ -41,5 +43,9 @@ def menu():
         elif choice == "3":
             canplacedestroy.choix()
             break
+        elif choice == "4":
+            strongholdfinder.all()
+            break
+
         
 
