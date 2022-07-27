@@ -1,6 +1,7 @@
 # MCPy-Tools
 ### Minecraft Tools using Python. You can find useful tools such as Block Counter for areas, Command generator and more.
 ## Work In Progress
+*Open main.py to start the app.
 
 ## Tools available
 * Area Block Counter - Count blocks from a given area.
