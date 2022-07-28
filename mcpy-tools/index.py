@@ -1,9 +1,14 @@
 import digging
 import canplacedestroy
+
 import debugmode
 from debugmode import *
+
 import strongholdfinder
 import level
+import chunkcal
+
+
 import colorama
 from colorama import Fore, Back, Style
 colorama.init()
@@ -26,6 +31,7 @@ def menu():
     print(b + "3. CanPlaceOn&CanDestroy - Command generator to give item that can destroy/be place on specific block.")
     print(b + "4. Stronghold Finder - Find stronghold, require 2 Ender eye.")
     print(b + "5. Best Y Level - List of all best Y levels for ores.")
+    print(b + "6. Blocks/Chunk converter - Conert chunks to blocks & vice versa.")
 
     print(c + "Write 'list' to open this list.")
     
@@ -52,6 +58,9 @@ def menu():
             break
         elif choice == "5":
             level.y()
+            break
+        elif choice == "6":
+            chunkcal.cc()
             break
 
         
