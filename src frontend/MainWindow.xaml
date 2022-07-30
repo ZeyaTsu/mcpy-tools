@@ -13,33 +13,33 @@
         <TabControl>
             <TabItem Header="Area Block Counter">
                 <Grid Background="#FFE5E5E5">
-                    <Button Content="Calculate" HorizontalAlignment="Left" Margin="345,230,0,0" VerticalAlignment="Top"/>
+                    <Button Content="Calculate" HorizontalAlignment="Left" Margin="342,224,0,0" VerticalAlignment="Top" Width="90" FontSize="16" Click="Button_Click"/>
 
                     <!--First Position-->
-                    <Label Content="First Position" HorizontalAlignment="Left" Margin="107,92,0,0" VerticalAlignment="Top"/>
-                    <Label Content="X:" HorizontalAlignment="Left" Margin="107,118,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="textBoxAF1" TextWrapping="Wrap" Margin="127,121,579,265" Visibility="Visible"/>
-                    <Label Content="Y:" HorizontalAlignment="Left" Margin="107,148,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="textBoxAF2" TextWrapping="Wrap" Margin="127,151,579,235" Visibility="Visible"/>
-                    <Label Content="Z:" HorizontalAlignment="Left" Margin="107,179,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="textBoxAF3" TextWrapping="Wrap" Margin="127,182,579,204" Visibility="Visible"/>
+                    <Label Content="First Position" HorizontalAlignment="Left" Margin="90,55,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="X:" HorizontalAlignment="Left" Margin="74,88,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:Name="textBoxAF1" TextWrapping="Wrap" Margin="97,92,600,288" Visibility="Visible" FontSize="16"/>
+                    <Label Content="Y:" HorizontalAlignment="Left" Margin="74,121,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:Name="textBoxAF2" TextWrapping="Wrap" Margin="97,126,600,254" Visibility="Visible" FontSize="16"/>
+                    <Label Content="Z:" HorizontalAlignment="Left" Margin="74,157,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:Name="textBoxAF3" TextWrapping="Wrap" Margin="97,160,600,220" Visibility="Visible" FontSize="16"/>
 
                     <!--Second Position-->
-                    <Label Content="Second Posotion" HorizontalAlignment="Left" Margin="518,92,0,0" VerticalAlignment="Top"/>
-                    <Label Content="X:" HorizontalAlignment="Left" Margin="518,121,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="textBoxAF4" TextWrapping="Wrap" Margin="538,124,168,262" Visibility="Visible"/>
-                    <Label Content="Y:" HorizontalAlignment="Left" Margin="518,148,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="textBoxAF5" TextWrapping="Wrap" Margin="538,148,168,238" Visibility="Visible"/>
-                    <Label Content="Z:" HorizontalAlignment="Left" Margin="518,166,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="textBoxAF6" TextWrapping="Wrap" Margin="538,172,168,214" Visibility="Visible"/>
+                    <Label Content="Second Posotion" HorizontalAlignment="Left" Margin="498,55,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="X:" HorizontalAlignment="Left" Margin="482,88,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:Name="textBoxAF4" TextWrapping="Wrap" Margin="510,92,187,287" Visibility="Visible" FontSize="16"/>
+                    <Label Content="Y:" HorizontalAlignment="Left" Margin="482,121,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:Name="textBoxAF5" TextWrapping="Wrap" Margin="510,126,187,253" Visibility="Visible" FontSize="16"/>
+                    <Label Content="Z:" HorizontalAlignment="Left" Margin="482,157,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:Name="textBoxAF6" TextWrapping="Wrap" Margin="510,160,187,220" Visibility="Visible" FontSize="16"/>
 
                     <!--Result-->
-                    <Label Content="Result" HorizontalAlignment="Left" Margin="357,307,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Result" HorizontalAlignment="Left" Margin="354,297,0,0" VerticalAlignment="Top" FontSize="16"/>
                     <RichTextBox Margin="297,333,317,10"
-                                 IsReadOnly="True">
+                                 IsReadOnly="True" FontSize="16">
                         <FlowDocument>
                             <Paragraph>
-                                <Run x:Name="richTextBoxAF1" Text=""/>
+                                <Run x:Name="richTextBoxAF" Text=""/>
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>
@@ -83,10 +83,10 @@
                     <Label Content="Number of chunks:" HorizontalAlignment="Left" Margin="476,87,0,0" VerticalAlignment="Top" FontSize="16"/>
                     <TextBox x:Name="textBoxBlocks" HorizontalAlignment="Left" Margin="166,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="138" Height="24"/>
                     <TextBox x:Name="textBoxChunks" HorizontalAlignment="Left" Margin="625,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="138" Height="24"/>
-                    <Button x:Name="buttonBC1" Content="Calculate" HorizontalAlignment="Left" Margin="166,122,0,0" VerticalAlignment="Top" Height="24" Width="138" Click=""/>
-                    <Button x:Name="buttonBC2" Content="Calculate" HorizontalAlignment="Left" Margin="625,120,0,0" VerticalAlignment="Top" Height="24" Width="138"/>
+                    <Button x:Name="buttonBC1" Content="Calculate" HorizontalAlignment="Left" Margin="166,122,0,0" VerticalAlignment="Top" Height="24" Width="138" Click="buttonBC1_Click"/>
+                    <Button x:Name="buttonBC2" Content="Calculate" HorizontalAlignment="Left" Margin="625,120,0,0" VerticalAlignment="Top" Height="24" Width="138" Click="buttonBC2_Click"/>
                     <Label Content="Result in chunk:" HorizontalAlignment="Left" Margin="21,0,0,0" VerticalAlignment="Center" FontSize="16"/>
-                    <RichTextBox Margin="21,219,490,101">
+                    <RichTextBox IsReadOnly="True" Margin="21,219,490,101">
                         <FlowDocument>
                             <Paragraph>
                                 <Run x:Name="richTextBoxChunks" Text=""/>
@@ -94,7 +94,7 @@
                         </FlowDocument>
                     </RichTextBox>
                     <Label Content="Result in blocks:" HorizontalAlignment="Left" Margin="476,0,0,0" VerticalAlignment="Center" FontSize="16"/>
-                    <RichTextBox Margin="476,219,35,101">
+                    <RichTextBox IsReadOnly="True" Margin="476,219,35,101">
                         <FlowDocument>
                             <Paragraph>
                                 <Run x:Name="richTextBoxBlocks" Text=""/>

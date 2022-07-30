@@ -17,17 +17,6 @@ namespace MCPy_Tools_GUI
 {
     public partial class MainWindow : Window
     {
-        // Init variables
-
-        // Area Block Counter
-        int x1 = 0;
-        int y1 = 0;
-        int z1 = 0;
-        int x2 = 0;
-        int y2 = 0;
-        int z2 = 0;
-        int afResult = 0;
-
         public MainWindow()
         {
             InitializeComponent();
@@ -47,6 +36,51 @@ namespace MCPy_Tools_GUI
             netherRichTextBox.Text = bestYTextNether;
         }
 
+        // Area Block Counter
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var x = Convert.ToInt32(textBoxAF1.Text);
+            var y = Convert.ToInt32(textBoxAF2.Text);
+            var z = Convert.ToInt32(textBoxAF3.Text);
+
+            var x2 = Convert.ToInt32(textBoxAF4.Text);
+            var y2 = Convert.ToInt32(textBoxAF5.Text);
+            var z2 = Convert.ToInt32(textBoxAF6.Text);
+
+            var x3 = x - x2;
+            if (x3 < 0)
+            {
+                x3 = x3 * -1;
+            }
+            x3 += 1;
+
+            var y3 = y - y2;
+            
+            if (y3 < 0)
+            {
+                y3 = y3 * -1;
+            }
+            if (y3 == 0)
+            {
+                y3 += 1;
+            }
+
+            var z3 = z - z2;
+
+            if (z3 < 0)
+            {
+                z3 = z3 * -1;
+            }
+            z3 += 1;
+
+            var fi = x3 * z3 * y3;
+
+            string result;
+            result = fi.ToString();
+
+            richTextBoxAF.Text = result;
+        }
+
         // Block | Chunk converter
         private void buttonBC1_Click(object sender, RoutedEventArgs e)
         {
@@ -62,6 +96,24 @@ namespace MCPy_Tools_GUI
                 if (success)
                 {
                     richTextBoxChunks.Text = result.ToString();
+                }
+            }
+        }
+
+        private void buttonBC2_Click(object sender, RoutedEventArgs e)
+        {
+            string[] values = { textBoxChunks.Text };
+            foreach (var value in values)
+            {
+                int number;
+
+                number = Convert.ToInt32(value);
+                var result = number * 16;
+
+                bool success = int.TryParse(value, out number);
+                if (success)
+                {
+                    richTextBoxBlocks.Text = result.ToString();
                 }
             }
         }
