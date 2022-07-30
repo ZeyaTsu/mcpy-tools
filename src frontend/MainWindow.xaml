@@ -18,20 +18,20 @@
                     <!--First Position-->
                     <Label Content="First Position" HorizontalAlignment="Left" Margin="107,92,0,0" VerticalAlignment="Top"/>
                     <Label Content="X:" HorizontalAlignment="Left" Margin="107,118,0,0" VerticalAlignment="Top"/>
-                    <TextBox TextWrapping="Wrap" Text="" Margin="127,121,579,265" Visibility="Visible"/>
+                    <TextBox x:Name="textBoxAF1" TextWrapping="Wrap" Margin="127,121,579,265" Visibility="Visible"/>
                     <Label Content="Y:" HorizontalAlignment="Left" Margin="107,148,0,0" VerticalAlignment="Top"/>
-                    <TextBox TextWrapping="Wrap" Text="" Margin="127,151,579,235" Visibility="Visible"/>
+                    <TextBox x:Name="textBoxAF2" TextWrapping="Wrap" Margin="127,151,579,235" Visibility="Visible"/>
                     <Label Content="Z:" HorizontalAlignment="Left" Margin="107,179,0,0" VerticalAlignment="Top"/>
-                    <TextBox TextWrapping="Wrap" Text="" Margin="127,182,579,204" Visibility="Visible"/>
+                    <TextBox x:Name="textBoxAF3" TextWrapping="Wrap" Margin="127,182,579,204" Visibility="Visible"/>
 
                     <!--Second Position-->
                     <Label Content="Second Posotion" HorizontalAlignment="Left" Margin="518,92,0,0" VerticalAlignment="Top"/>
                     <Label Content="X:" HorizontalAlignment="Left" Margin="518,121,0,0" VerticalAlignment="Top"/>
-                    <TextBox TextWrapping="Wrap" Text="" Margin="538,124,168,262" Visibility="Visible"/>
+                    <TextBox x:Name="textBoxAF4" TextWrapping="Wrap" Margin="538,124,168,262" Visibility="Visible"/>
                     <Label Content="Y:" HorizontalAlignment="Left" Margin="518,148,0,0" VerticalAlignment="Top"/>
-                    <TextBox TextWrapping="Wrap" Text="" Margin="538,148,168,238" Visibility="Visible"/>
+                    <TextBox x:Name="textBoxAF5" TextWrapping="Wrap" Margin="538,148,168,238" Visibility="Visible"/>
                     <Label Content="Z:" HorizontalAlignment="Left" Margin="518,166,0,0" VerticalAlignment="Top"/>
-                    <TextBox TextWrapping="Wrap" Text="" Margin="538,172,168,214" Visibility="Visible"/>
+                    <TextBox x:Name="textBoxAF6" TextWrapping="Wrap" Margin="538,172,168,214" Visibility="Visible"/>
 
                     <!--Result-->
                     <Label Content="Result" HorizontalAlignment="Left" Margin="357,307,0,0" VerticalAlignment="Top"/>
@@ -39,7 +39,7 @@
                                  IsReadOnly="True">
                         <FlowDocument>
                             <Paragraph>
-                                <Run Text=""/>
+                                <Run x:Name="richTextBoxAF1" Text=""/>
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>
@@ -55,12 +55,54 @@
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
             <TabItem Header="Best Y Level">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Overworld" HorizontalAlignment="Left" Margin="157,1,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Nether" HorizontalAlignment="Left" Margin="566,0,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <RichTextBox IsReadOnly="True" Margin="0,31,397,0">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run x:Name="overworldRichTextBox" FontSize="20"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <RichTextBox IsReadOnly="True" Margin="397,31,0,0">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run x:Name="netherRichTextBox" FontSize="20"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <Label Content="Note: Gold is more present in Badlands biome or Nether." HorizontalAlignment="Left" Margin="250,4,0,0" VerticalAlignment="Top"/>
+                </Grid>
             </TabItem>
             <TabItem Header="Blocks | Chunk converter">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Block to Chunk" HorizontalAlignment="Left" Margin="94,10,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Chunk to Block" HorizontalAlignment="Left" Margin="579,10,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Number of blocks:" HorizontalAlignment="Left" Margin="21,87,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Number of chunks:" HorizontalAlignment="Left" Margin="476,87,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:Name="textBoxBlocks" HorizontalAlignment="Left" Margin="166,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="138" Height="24"/>
+                    <TextBox x:Name="textBoxChunks" HorizontalAlignment="Left" Margin="625,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="138" Height="24"/>
+                    <Button x:Name="buttonBC1" Content="Calculate" HorizontalAlignment="Left" Margin="166,122,0,0" VerticalAlignment="Top" Height="24" Width="138" Click=""/>
+                    <Button x:Name="buttonBC2" Content="Calculate" HorizontalAlignment="Left" Margin="625,120,0,0" VerticalAlignment="Top" Height="24" Width="138"/>
+                    <Label Content="Result in chunk:" HorizontalAlignment="Left" Margin="21,0,0,0" VerticalAlignment="Center" FontSize="16"/>
+                    <RichTextBox Margin="21,219,490,101">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run x:Name="richTextBoxChunks" Text=""/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <Label Content="Result in blocks:" HorizontalAlignment="Left" Margin="476,0,0,0" VerticalAlignment="Center" FontSize="16"/>
+                    <RichTextBox Margin="476,219,35,101">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run x:Name="richTextBoxBlocks" Text=""/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                </Grid>
             </TabItem>
         </TabControl>
-
     </Grid>
 </Window>
