@@ -34,6 +34,13 @@ namespace MCPy_Tools_GUI
                 "Netherite: 11 / 13" + Environment.NewLine +
                 "Quartz: 12 / 80";
             netherRichTextBox.Text = bestYTextNether;
+
+            // Init Stronghold Finder
+            comboBoxSF.Items.Add("North");
+            comboBoxSF.Items.Add("South");
+            comboBoxSF.Items.Add("West");
+            comboBoxSF.Items.Add("East");
+            comboBoxSF.SelectedItem = "North";
         }
 
         // Area Block Counter
@@ -115,6 +122,74 @@ namespace MCPy_Tools_GUI
                 {
                     richTextBoxBlocks.Text = result.ToString();
                 }
+            }
+        }
+
+        // Stronghold Finder
+
+        public void comboBoxSF_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (comboBoxSF.Text == "North" || comboBoxSF.Text == "South")
+            {
+                if (comboBoxSF.Text == "North")
+                {
+                    labelSF1.Content = "Note: Go to X: 0, Z: 310";
+                }
+                if (comboBoxSF.Text == "South")
+                {
+                    labelSF1.Content = "Note: Go to X: 0, Z: -310";
+                }
+            }
+        }
+
+        public void buttonSF2_Click(object sender, RoutedEventArgs e)
+        {
+            var ThisAngle1 = Convert.ToDouble(textBoxSF1.Text);
+            var h0 = 90 - ThisAngle1;
+            var h1 = (Math.PI / 180) * h0;
+
+            var ThisAngle2 = Convert.ToDouble(textBoxSF2.Text);
+            var h00 = 90 - ThisAngle2;
+            var h2 = (Math.PI / 180) * h00;
+
+            double c;
+
+            c = 0;
+            
+            if (comboBoxSF.Text == "North")
+            {
+                c = (-310);
+            }
+            if (comboBoxSF.Text == "South")
+            {
+                c = 310;
+            }
+            if (comboBoxSF.Text == "West")
+            {
+                c = (-310);
+            }
+            if (comboBoxSF.Text == "East")
+            {
+                c = 310;
+            }
+
+            var xNorthFind = -(c / (Math.Tan(h1) - Math.Tan(h2)));
+            var zNorthFind = (c * Math.Tan(h1)) / (Math.Tan(h1) - Math.Tan(h2));
+
+            var aWestFind = c * Math.Tan(h1) / (Math.Tan(h1) - Math.Tan(h2));
+            var bWestFind = -(c / (Math.Tan(h1) - Math.Tan(h2)));
+
+            if (comboBoxSF.Text == "North" || comboBoxSF.Text == "South")
+            {
+                richTextBoxSF.Text = "Stronghold found!" + Environment.NewLine +
+                "X: " + xNorthFind + Environment.NewLine +
+                "Z: " + zNorthFind;
+            }
+            else
+            {
+                richTextBoxSF.Text = "Stronghold found!" + Environment.NewLine +
+                "X: " + aWestFind + Environment.NewLine +
+                "Z: " + bWestFind;
             }
         }
     }
