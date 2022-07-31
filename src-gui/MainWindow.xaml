@@ -1,0 +1,108 @@
+﻿<Window x:Class="MCPy_Tools_GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MCPy_Tools_GUI"
+        mc:Ignorable="d"
+        Title="MCPy Tools" Height="450" Width="800"
+        MinHeight="450" MinWidth="800"
+        MaxHeight="450" MaxWidth="800">
+
+    <Grid>
+        <TabControl>
+            <TabItem Header="Area Block Counter">
+                <Grid Background="#FFE5E5E5">
+                    <Button Content="Calculate" HorizontalAlignment="Left" Margin="342,224,0,0" VerticalAlignment="Top" Width="90" FontSize="16" Click="Button_Click"/>
+
+                    <!--First Position-->
+                    <Label Content="First Position" HorizontalAlignment="Left" Margin="90,55,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="X:" HorizontalAlignment="Left" Margin="74,88,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:Name="textBoxAF1" TextWrapping="Wrap" Margin="97,90,600,289" Visibility="Visible" FontSize="16" Height="27"/>
+                    <Label Content="Y:" HorizontalAlignment="Left" Margin="74,121,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:Name="textBoxAF2" TextWrapping="Wrap" Margin="97,125,600,254" Visibility="Visible" FontSize="16" Height="27"/>
+                    <Label Content="Z:" HorizontalAlignment="Left" Margin="74,157,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:Name="textBoxAF3" TextWrapping="Wrap" Margin="97,159,600,220" Visibility="Visible" FontSize="16" Height="27"/>
+
+                    <!--Second Position-->
+                    <Label Content="Second Posotion" HorizontalAlignment="Left" Margin="505,61,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="X:" HorizontalAlignment="Left" Margin="482,88,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:Name="textBoxAF4" TextWrapping="Wrap" Margin="510,92,187,287" Visibility="Visible" FontSize="16" Height="27"/>
+                    <Label Content="Y:" HorizontalAlignment="Left" Margin="482,121,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:Name="textBoxAF5" TextWrapping="Wrap" Margin="510,125,187,254" Visibility="Visible" FontSize="16" Height="27"/>
+                    <Label Content="Z:" HorizontalAlignment="Left" Margin="482,157,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:Name="textBoxAF6" TextWrapping="Wrap" Margin="510,159,187,220" Visibility="Visible" FontSize="16" Height="27"/>
+
+                    <!--Result-->
+                    <Label Content="Result" HorizontalAlignment="Left" Margin="354,297,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <RichTextBox Margin="297,333,317,10"
+                                 IsReadOnly="True" FontSize="16">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run x:Name="richTextBoxAF" Text=""/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Mineshaft mirror">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="CanPlaceOn | CanDestroy">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Stronghold Finder">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Best Y Level">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Overworld" HorizontalAlignment="Left" Margin="157,1,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Nether" HorizontalAlignment="Left" Margin="566,0,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <RichTextBox IsReadOnly="True" Margin="0,31,397,0">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run x:Name="overworldRichTextBox" FontSize="20"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <RichTextBox IsReadOnly="True" Margin="397,31,0,0">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run x:Name="netherRichTextBox" FontSize="20"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <Label Content="Note: Gold is more present in Badlands biome or Nether." HorizontalAlignment="Left" Margin="250,4,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Blocks | Chunk converter">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Block to Chunk" HorizontalAlignment="Left" Margin="94,10,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Chunk to Block" HorizontalAlignment="Left" Margin="579,10,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Number of blocks:" HorizontalAlignment="Left" Margin="21,87,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Number of chunks:" HorizontalAlignment="Left" Margin="476,87,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:Name="textBoxBlocks" HorizontalAlignment="Left" Margin="166,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="138" Height="24"/>
+                    <TextBox x:Name="textBoxChunks" HorizontalAlignment="Left" Margin="625,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="138" Height="24"/>
+                    <Button x:Name="buttonBC1" Content="Calculate" HorizontalAlignment="Left" Margin="166,122,0,0" VerticalAlignment="Top" Height="24" Width="138" Click="buttonBC1_Click"/>
+                    <Button x:Name="buttonBC2" Content="Calculate" HorizontalAlignment="Left" Margin="625,120,0,0" VerticalAlignment="Top" Height="24" Width="138" Click="buttonBC2_Click"/>
+                    <Label Content="Result in chunk:" HorizontalAlignment="Left" Margin="21,0,0,0" VerticalAlignment="Center" FontSize="16"/>
+                    <RichTextBox IsReadOnly="True" Margin="21,219,490,101">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run x:Name="richTextBoxChunks" Text=""/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <Label Content="Result in blocks:" HorizontalAlignment="Left" Margin="476,0,0,0" VerticalAlignment="Center" FontSize="16"/>
+                    <RichTextBox IsReadOnly="True" Margin="476,219,35,101">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run x:Name="richTextBoxBlocks" Text=""/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
