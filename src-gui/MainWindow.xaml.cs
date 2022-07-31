@@ -36,12 +36,11 @@ namespace MCPy_Tools_GUI
             netherRichTextBox.Text = bestYTextNether;
 
             // Init Stronghold Finder
-            //comboBoxSF.Items.Add("None");
             comboBoxSF.Items.Add("North");
             comboBoxSF.Items.Add("South");
             comboBoxSF.Items.Add("West");
             comboBoxSF.Items.Add("East");
-            comboBoxSF.SelectedItem = "None";
+            comboBoxSF.SelectedItem = "North";
         }
 
         // Area Block Counter
@@ -127,27 +126,6 @@ namespace MCPy_Tools_GUI
         }
 
         // Stronghold Finder
-
-        public void comboBoxSF_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (comboBoxSF.Text == "North")
-            {
-                labelSF1.Content = "Note: Go to X: 0, Z: -310"; // FUCK THE FUCKING LOGIC OF FUCKING COMBOBOX
-            }
-            else if (comboBoxSF.Text == "South")
-            {
-                labelSF1.Content = "Note: Go to X: 0, Z: 310"; // FUCK THE FUCKING LOGIC OF FUCKING COMBOBOX
-            }
-            else if (comboBoxSF.Text == "West")
-            {
-                labelSF1.Content = "Note: Go to X: 0, Z: -310";
-            }
-            else if (comboBoxSF.Text == "East")
-            {
-                labelSF1.Content = "Note: Go to X: 0, Z: 310";
-            }
-        }
-
         public void buttonSF2_Click(object sender, RoutedEventArgs e)
         {
             var ThisAngle1 = Convert.ToDouble(textBoxSF1.Text);
