@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -202,6 +203,12 @@ namespace MCPy_Tools_GUI
             {
                 richTextBoxCC.Text = "/give @s minecraft:" + textBoxCC1.Text + "{CanDestroy:[\u0022minecraft:" + textBoxCC2.Text + "\u0022]}";
             }
+        }
+
+        // About
+        private void aboutButton_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/ZeyaTsu/mcpy-tools");
         }
     }
 }
