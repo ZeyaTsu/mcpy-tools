@@ -36,11 +36,12 @@ namespace MCPy_Tools_GUI
             netherRichTextBox.Text = bestYTextNether;
 
             // Init Stronghold Finder
+            //comboBoxSF.Items.Add("None");
             comboBoxSF.Items.Add("North");
             comboBoxSF.Items.Add("South");
             comboBoxSF.Items.Add("West");
             comboBoxSF.Items.Add("East");
-            comboBoxSF.SelectedItem = "North";
+            comboBoxSF.SelectedItem = "None";
         }
 
         // Area Block Counter
@@ -129,16 +130,21 @@ namespace MCPy_Tools_GUI
 
         public void comboBoxSF_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (comboBoxSF.Text == "North" || comboBoxSF.Text == "South")
+            if (comboBoxSF.Text == "North")
             {
-                if (comboBoxSF.Text == "North")
-                {
-                    labelSF1.Content = "Note: Go to X: 0, Z: 310";
-                }
-                if (comboBoxSF.Text == "South")
-                {
-                    labelSF1.Content = "Note: Go to X: 0, Z: -310";
-                }
+                labelSF1.Content = "Note: Go to X: 0, Z: -310"; // FUCK THE FUCKING LOGIC OF FUCKING COMBOBOX
+            }
+            else if (comboBoxSF.Text == "South")
+            {
+                labelSF1.Content = "Note: Go to X: 0, Z: 310"; // FUCK THE FUCKING LOGIC OF FUCKING COMBOBOX
+            }
+            else if (comboBoxSF.Text == "West")
+            {
+                labelSF1.Content = "Note: Go to X: 0, Z: -310";
+            }
+            else if (comboBoxSF.Text == "East")
+            {
+                labelSF1.Content = "Note: Go to X: 0, Z: 310";
             }
         }
 
@@ -147,10 +153,14 @@ namespace MCPy_Tools_GUI
             var ThisAngle1 = Convert.ToDouble(textBoxSF1.Text);
             var h0 = 90 - ThisAngle1;
             var h1 = (Math.PI / 180) * h0;
+            var h11 = ThisAngle1;
+            var h3 = (Math.PI / 180) * h11;
 
             var ThisAngle2 = Convert.ToDouble(textBoxSF2.Text);
             var h00 = 90 - ThisAngle2;
             var h2 = (Math.PI / 180) * h00;
+            var h22 = ThisAngle2;
+            var h4 = (Math.PI / 180) * h22;
 
             double c;
 
@@ -176,8 +186,8 @@ namespace MCPy_Tools_GUI
             var xNorthFind = -(c / (Math.Tan(h1) - Math.Tan(h2)));
             var zNorthFind = (c * Math.Tan(h1)) / (Math.Tan(h1) - Math.Tan(h2));
 
-            var aWestFind = c * Math.Tan(h1) / (Math.Tan(h1) - Math.Tan(h2));
-            var bWestFind = -(c / (Math.Tan(h1) - Math.Tan(h2)));
+            var aWestFind = (c * Math.Tan(h3)) / (Math.Tan(h3) - Math.Tan(h4));
+            var bWestFind = -(c / (Math.Tan(h3) - Math.Tan(h4)));
 
             if (comboBoxSF.Text == "North" || comboBoxSF.Text == "South")
             {
@@ -185,7 +195,7 @@ namespace MCPy_Tools_GUI
                 "X: " + xNorthFind + Environment.NewLine +
                 "Z: " + zNorthFind;
             }
-            else
+            if (comboBoxSF.Text == "West" || comboBoxSF.Text == "East")
             {
                 richTextBoxSF.Text = "Stronghold found!" + Environment.NewLine +
                 "X: " + aWestFind + Environment.NewLine +
