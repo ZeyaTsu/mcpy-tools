@@ -54,7 +54,22 @@
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
             <TabItem Header="CanPlaceOn | CanDestroy">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Items:" HorizontalAlignment="Left" Margin="379,12,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:Name="textBoxCC1" HorizontalAlignment="Left" Margin="291,48,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229" FontSize="16"/>
+                    <Button x:Name="buttonCC" Content="Generate command" HorizontalAlignment="Left" Margin="327,237,0,0" VerticalAlignment="Top" FontSize="16" Width="157" Click="buttonCC_Click"/>
+                    <RadioButton x:Name="radioButtonCC1" Content="CanPlaceOn" HorizontalAlignment="Left" Margin="291,103,0,0" VerticalAlignment="Top" FontSize="16" IsChecked="True"/>
+                    <RadioButton x:Name="radioButtonCC2" Content="CanDestroy" HorizontalAlignment="Left" Margin="419,103,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <RichTextBox Margin="0,279,0,0" FontSize="16" IsReadOnly="True">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run x:Name="richTextBoxCC" Text=""/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <Label Content="Name of the blocks who can place on / can destro:" HorizontalAlignment="Left" Margin="222,144,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:Name="textBoxCC2" HorizontalAlignment="Left" Margin="291,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229" FontSize="16"/>
+                </Grid>
             </TabItem>
             <TabItem Header="Stronghold Finder">
                 <Grid Background="#FFE5E5E5">

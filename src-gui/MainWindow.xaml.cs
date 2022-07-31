@@ -41,6 +41,16 @@ namespace MCPy_Tools_GUI
             comboBoxSF.Items.Add("West");
             comboBoxSF.Items.Add("East");
             comboBoxSF.SelectedItem = "North";
+
+            // CanPlaceOn | CanDestroy
+            if (radioButtonCC1.IsChecked == true)
+            {
+                radioButtonCC2.IsChecked = false;
+            }
+            if (radioButtonCC2.IsChecked == true)
+            {
+                radioButtonCC1.IsChecked = false;
+            }
         }
 
         // Area Block Counter
@@ -178,6 +188,19 @@ namespace MCPy_Tools_GUI
                 richTextBoxSF.Text = "Stronghold found!" + Environment.NewLine +
                 "X: " + aWestFind + Environment.NewLine +
                 "Z: " + bWestFind;
+            }
+        }
+
+        // CanPlaceOn | CanDestroy
+        private void buttonCC_Click(object sender, RoutedEventArgs e)
+        {
+            if (radioButtonCC1.IsChecked == true)
+            {
+                richTextBoxCC.Text = "/give @s minecraft:" + textBoxCC1.Text + "{CanPlaceOn:[" + textBoxCC2.Text + "]}";
+            }
+            else if (radioButtonCC2.IsChecked == true)
+            {
+                richTextBoxCC.Text = "/give @s minecraft:" + textBoxCC1.Text + "{CanDestroy:[\u0022minecraft:" + textBoxCC2.Text + "\u0022]}";
             }
         }
     }
