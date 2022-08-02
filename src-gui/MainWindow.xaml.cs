@@ -78,10 +78,7 @@ namespace MCPy_Tools_GUI
             {
                 y3 = y3 * -1;
             }
-            if (y3 == 0)
-            {
-                y3 += 1;
-            }
+            y3 += 1;
 
             var z3 = z - z2;
 
