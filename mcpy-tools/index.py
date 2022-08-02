@@ -7,7 +7,7 @@ from debugmode import *
 import strongholdfinder
 import level
 import chunkcal
-
+import wall
 
 import colorama
 from colorama import Fore, Back, Style
@@ -25,13 +25,14 @@ def menu():
     print(b + "- - - - -     By     - - - - -")
     print(b + "- - - - -  ZeyaTsu   - - - - -")
 
-    print(c + "- - - - - Choose an App - - - - -")
-    print(b + "1. Area Block Counter - Count blocks from a given area.")
+    print(c + "- - - - - Choose an App - - - - -") 
+    print(b + "1. Area Block Counter - Count blocks from a given area.") # check
     print(b + "2. Mineshaft mirror - Find another mineshaft by finding a mineshaft.")
-    print(b + "3. CanPlaceOn&CanDestroy - Command generator to give item that can destroy/be place on specific block.")
-    print(b + "4. Stronghold Finder - Find stronghold, require 2 Ender eye.")
-    print(b + "5. Best Y Level - List of all best Y levels for ores.")
-    print(b + "6. Blocks/Chunk converter - Conert chunks to blocks & vice versa.")
+    print(b + "3. CanPlaceOn&CanDestroy - Command generator to give item that can destroy/be place on specific block.") # check
+    print(b + "4. Stronghold Finder - Find stronghold, require 2 Ender eye.")# check
+    print(b + "5. Best Y Level - List of all best Y levels for ores.")# check
+    print(b + "6. Blocks/Chunk converter - Conert chunks to blocks & vice versa.")# check
+    print(b + "7. Perimeter Calculation")
 
     print(c + "Write 'list' to open this list.")
     
@@ -61,6 +62,9 @@ def menu():
             break
         elif choice == "6":
             chunkcal.cc()
+            break
+        elif choice == "7":
+            wall.perimeter()
             break
 
         

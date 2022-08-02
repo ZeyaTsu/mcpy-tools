@@ -41,18 +41,19 @@ def all():
     print("Redo the steps and enter the number you get in the facing section:")
     ThisAngle2 = float(input("> "))
 
-
+    
 
 #142
 #135.1
-
+    angle1 = ThisAngle1
+    angle2 = ThisAngle2
     h0 = 90 - ThisAngle1
     h00 = 90 - ThisAngle2
 
     def north(h0, c, h00):
         h1 = math.radians(h0)
         h2 = math.radians(h00)
-    
+       
 
         xNorthFind = -(c / (math.tan(h1) - math.tan(h2)))
         zNorthFind = (c*math.tan(h1)) / (math.tan(h1) - math.tan(h2)) 
@@ -67,16 +68,13 @@ def all():
 
 
 
-
-
-    def west(h0, c, h00):
-        h1 = math.radians(h0)
-        h2 = math.radians(h00)
-    
-
-        aWestFind = c * math.tan(h1) / (math.tan(h1) - math.tan(h2))           
-        bWestFind = -(c / (math.tan(h1) - math.tan(h2)))
-
+       
+    def west(c, angle1, angle2):
+        print("gfhjghdfjgd")
+        h3 = math.radians(angle1)
+        h4 = math.radians(angle2)
+        aWestFind = (c * math.tan(h3)) / (math.tan(h3) - math.tan(h4))
+        bWestFind = -(c / (math.tan(h3) - math.tan(h4)))
 
         print("- - - - -  Coordinates - - - - -")
 
@@ -87,11 +85,18 @@ def all():
         choix()
 
 
-    if facing == "north" or "south":
+    if facing == "west":
+        west(c, angle1, angle2)
+    if facing == "east":
+        west(c, angle1, angle2)
+    if facing == "north":
+        north(h0, c, h00)
+    if facing == "south":
         north(h0, c, h00)
 
-    elif facing == "east" or "west":
-        west(h0, c, h00)
+    
+ 
+
 
     
 def choix():
@@ -106,3 +111,4 @@ def choix():
         elif ca == "r" or "res" or "restart":
             all()
             w = False
+
