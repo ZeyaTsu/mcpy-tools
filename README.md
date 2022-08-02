@@ -1,6 +1,6 @@
 # MCPy-Tools
 ### Minecraft Tools using Python. You can find useful tools such as Block Counter for areas, Command generator, Stronghold finder and more.
-## Work In Progress
+
 * Open MCPy-Tools.ink to start the app.
 
 ## Tools available
@@ -21,3 +21,8 @@
 # Credits
 ## Experimental Mode (backend python code) - ZeyaTsu
 ## GUI in C# for MCPy-Tools - v38armageddon
+
+## Support
+* https://discord.gg/7yCaDETDE3
+
+### Version 1
