@@ -20,4 +20,4 @@
 
 # Credits
 ## Experimental Mode (backend python code) - ZeyaTsu
-## GUI in C for MCPy-Tools - v38armageddon
+## GUI in C# for MCPy-Tools - v38armageddon
