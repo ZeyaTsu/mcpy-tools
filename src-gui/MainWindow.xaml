@@ -91,8 +91,8 @@
                         </FlowDocument>
                     </RichTextBox>
                     <Label Content="Note: Go to X: 0, Z: 0 and have 2 ender eyes" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Note: Go to X: 0, Z: -310 for North and West Facing" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Note: Go to X: 0, Z: 310 for South and East Facing" HorizontalAlignment="Center" Margin="0,172,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Note: Go to X: 0, Z: -310 for North | X: -310, Z: 0 for West" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Note: Go to X: 0, Z: 310 for South | X: 310, Z: 0 for East" HorizontalAlignment="Center" Margin="0,172,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Best Y Level">
