@@ -67,5 +67,4 @@ def menu():
             wall.perimeter()
             break
 
-        
-
+         
