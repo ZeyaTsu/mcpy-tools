@@ -67,7 +67,7 @@
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>
-                    <Label Content="Name of the blocks who can place on / can destro:" HorizontalAlignment="Left" Margin="222,144,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Blocks who can place on / can destro:" HorizontalAlignment="Left" Margin="268,144,0,0" VerticalAlignment="Top" FontSize="16"/>
                     <TextBox x:Name="textBoxCC2" HorizontalAlignment="Left" Margin="291,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229" FontSize="16"/>
                 </Grid>
             </TabItem>
@@ -91,8 +91,8 @@
                         </FlowDocument>
                     </RichTextBox>
                     <Label Content="Note: Go to X: 0, Z: 0 and have 2 ender eyes" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Note: Go to X: 0, Z: -310 for North and West Facing" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Note: Go to X: 0, Z: 310 for South and East Facing" HorizontalAlignment="Center" Margin="0,172,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Note: Go to X: 0, Z: -310 for North | X: -310, Z: 0 for West" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Note: Go to X: 0, Z: 310 for South | X: 310, Z: 0 for East" HorizontalAlignment="Center" Margin="0,172,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Best Y Level">
@@ -152,7 +152,7 @@
                     <Label Content="Original Creator: ZeyaTsu" HorizontalAlignment="Center" Margin="0,278,0,0" VerticalAlignment="Top" FontSize="16"/>
                     <Label Content="MCPy Tools GUI: v38armageddon" HorizontalAlignment="Center" Margin="0,309,0,0" VerticalAlignment="Top" FontSize="16"/>
                     <Label Content="This software is Open Source with the lincense: MIT" HorizontalAlignment="Center" Margin="0,340,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Button x:Name="aboutButton" Content="View on GitHub" HorizontalAlignment="Left" Margin="658,10,0,0" VerticalAlignment="Top" FontSize="16" Width="126" Click="aboutButton_Click"/>
+                    <Button x:Name="aboutButton" Content="View on GitHub" HorizontalAlignment="Left" Margin="646,10,0,0" VerticalAlignment="Top" FontSize="16" Width="126" Click="aboutButton_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>

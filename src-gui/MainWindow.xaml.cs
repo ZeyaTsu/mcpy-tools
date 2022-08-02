@@ -78,10 +78,7 @@ namespace MCPy_Tools_GUI
             {
                 y3 = y3 * -1;
             }
-            if (y3 == 0)
-            {
-                y3 += 1;
-            }
+            y3 += 1;
 
             var z3 = z - z2;
 
@@ -195,13 +192,42 @@ namespace MCPy_Tools_GUI
         // CanPlaceOn | CanDestroy
         private void buttonCC_Click(object sender, RoutedEventArgs e)
         {
+            var blocklist = new List<string>();
+            var mc = "minecraft:";
+            
             if (radioButtonCC1.IsChecked == true)
             {
-                richTextBoxCC.Text = "/give @s minecraft:" + textBoxCC1.Text + "{CanPlaceOn:[" + textBoxCC2.Text + "]}";
+                if (textBoxCC2.Text.Contains(","))
+                {
+                    // add all blocks to list and show to richtextboxcc
+                    var blocks = textBoxCC2.Text.Split(',');
+                    foreach (var block in blocks)
+                    {
+                        blocklist.Add(mc + block);
+                    }
+                    richTextBoxCC.Text = "/give @s minecraft:" + textBoxCC1.Text + "{CanPlaceOn:[\u0022" + string.Join(",", blocklist) + "\u0022]}";
+                }
+                else
+                {
+                    richTextBoxCC.Text = "/give @s minecraft:" + textBoxCC1.Text + "{CanPlaceOn:[\u0022" + mc + textBoxCC2.Text + "\u0022]}";
+                }
             }
             else if (radioButtonCC2.IsChecked == true)
             {
-                richTextBoxCC.Text = "/give @s minecraft:" + textBoxCC1.Text + "{CanDestroy:[\u0022minecraft:" + textBoxCC2.Text + "\u0022]}";
+                if (textBoxCC2.Text.Contains(","))
+                {
+                    // add all blocks to list and show to richtextboxcc
+                    var blocks = textBoxCC2.Text.Split(',');
+                    foreach (var block in blocks)
+                    {
+                        blocklist.Add(mc + block);
+                    }
+                    richTextBoxCC.Text = "/give @s minecraft:" + textBoxCC1.Text + "{CanDestroy:[\u0022" + string.Join(",", blocklist) + "\u0022]}";
+                }
+                else
+                {
+                    richTextBoxCC.Text = "/give @s minecraft:" + textBoxCC1.Text + "{CanDestroy:[\u0022" + mc + textBoxCC2.Text + "\u0022]}";
+                }
             }
         }
 
