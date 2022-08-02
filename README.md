@@ -17,3 +17,7 @@
 ## Debug Mode (Works in experimental mode)
 * Write 'debug' to start a debug mode.
 * 's-d' to stop it.
+
+# Credits
+## Experimental Mode (backend python code) - ZeyaTsu
+## GUI in C for MCPy-Tools - v38armageddon
