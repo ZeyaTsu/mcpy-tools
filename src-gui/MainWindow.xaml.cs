@@ -231,6 +231,43 @@ namespace MCPy_Tools_GUI
             }
         }
 
+        // Perimeter Calculation
+        private void buttonPC_Click(object sender, RoutedEventArgs e)
+        {
+            var x = Convert.ToInt32(textBoxPC1.Text);
+            var y = Convert.ToInt32(textBoxPC2.Text);
+            var z = Convert.ToInt32(textBoxPC3.Text);
+
+            var x2 = Convert.ToInt32(textBoxPC4.Text);
+            var y2 = Convert.ToInt32(textBoxPC5.Text);
+            var z2 = Convert.ToInt32(textBoxPC6.Text);
+
+            var x3 = x - x2;
+            var y3 = y - y2;
+            var z3 = z - z2;
+
+            if (x3 < 0)
+            {
+                x3 = x3 * -1;
+            }
+            x3 += 1;
+
+            if (z3 < 0)
+            {
+                z3 = z3 * -1;
+            }
+            z3 += 1;
+
+            if (y3 < 0)
+            {
+                y3 = y3 * -1;
+            }
+            y3 += 1;
+
+            var per = (2*(x3+z3)) * y3;
+            richTextBoxPC.Text = per.ToString() + " Blocks";
+        }
+
         // About
         private void aboutButton_Click(object sender, RoutedEventArgs e)
         {

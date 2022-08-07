@@ -144,6 +144,42 @@
                     </RichTextBox>
                 </Grid>
             </TabItem>
+
+            <TabItem Header="Perimeter Calculation">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="buttonPC" Content="Calculate" HorizontalAlignment="Center" Margin="0,223,0,0" VerticalAlignment="Top" Width="90" FontSize="16" Click="buttonPC_Click"/>
+
+                    <!--First Position-->
+                    <Label Content="First Position" HorizontalAlignment="Left" Margin="164,62,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="X:" HorizontalAlignment="Left" Margin="126,88,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Y:" HorizontalAlignment="Left" Margin="126,121,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Z:" HorizontalAlignment="Left" Margin="126,157,0,0" VerticalAlignment="Top" FontSize="16"/>
+
+                    <!--Second Position-->
+                    <Label Content="Second Position" HorizontalAlignment="Left" Margin="517,62,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="X:" HorizontalAlignment="Left" Margin="494,88,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Y:" HorizontalAlignment="Left" Margin="496,121,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Z:" HorizontalAlignment="Left" Margin="496,157,0,0" VerticalAlignment="Top" FontSize="16"/>
+
+                    <!--Result-->
+                    <Label Content="Result" HorizontalAlignment="Center" Margin="0,253,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <RichTextBox Margin="0,289,0,0"
+                                 IsReadOnly="True" FontSize="16">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run x:Name="richTextBoxPC" Text=""/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <TextBox x:Name="textBoxPC1" HorizontalAlignment="Left" Margin="154,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <TextBox x:Name="textBoxPC2" HorizontalAlignment="Left" Margin="154,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <TextBox x:Name="textBoxPC3" HorizontalAlignment="Left" Margin="154,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <TextBox x:Name="textBoxPC4" HorizontalAlignment="Left" Margin="518,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <TextBox x:Name="textBoxPC5" HorizontalAlignment="Left" Margin="518,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <TextBox x:Name="textBoxPC6" HorizontalAlignment="Left" Margin="518,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                </Grid>
+            </TabItem>
+
             <TabItem Header="About">
                 <Grid Background="#FFE5E5E5">
                     <Image HorizontalAlignment="Left" Height="214" Margin="290,10,0,0" VerticalAlignment="Top" Width="226" Source="/mcpylogo.ico"/>
