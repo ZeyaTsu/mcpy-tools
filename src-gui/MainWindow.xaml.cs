@@ -73,7 +73,7 @@ namespace MCPy_Tools_GUI
             x3 += 1;
 
             var y3 = y - y2;
-            
+
             if (y3 < 0)
             {
                 y3 = y3 * -1;

@@ -13,41 +13,36 @@
         <TabControl>
             <TabItem Header="Area Block Counter">
                 <Grid Background="#FFE5E5E5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="75*"/>
-                        <ColumnDefinition Width="3*"/>
-                        <ColumnDefinition Width="319*"/>
-                    </Grid.ColumnDefinitions>
-                    <Button Content="Calculate" HorizontalAlignment="Left" Margin="186,224,0,0" VerticalAlignment="Top" Width="90" FontSize="16" Click="Button_Click" Grid.Column="2"/>
+                    <Button Content="Calculate" HorizontalAlignment="Center" Margin="0,214,0,0" VerticalAlignment="Top" Width="90" FontSize="16" Click="Button_Click"/>
 
                     <!--First Position-->
-                    <Label Content="First Position" HorizontalAlignment="Left" Margin="112,62,0,0" VerticalAlignment="Top" FontSize="16" Grid.ColumnSpan="3"/>
-                    <Label Content="X:" HorizontalAlignment="Left" Margin="74,88,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Label Content="Y:" HorizontalAlignment="Left" Margin="74,121,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Label Content="Z:" HorizontalAlignment="Left" Margin="74,157,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="First Position" HorizontalAlignment="Left" Margin="169,62,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="X:" HorizontalAlignment="Left" Margin="131,88,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Y:" HorizontalAlignment="Left" Margin="131,121,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Z:" HorizontalAlignment="Left" Margin="131,157,0,0" VerticalAlignment="Top" FontSize="16"/>
 
                     <!--Second Position-->
-                    <Label Content="Second Position" HorizontalAlignment="Left" Margin="348,62,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="2"/>
-                    <Label Content="X:" HorizontalAlignment="Left" Margin="326,88,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="2"/>
-                    <Label Content="Y:" HorizontalAlignment="Left" Margin="326,121,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="2"/>
-                    <Label Content="Z:" HorizontalAlignment="Left" Margin="326,157,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="2"/>
+                    <Label Content="Second Position" HorizontalAlignment="Left" Margin="507,62,0,0" VerticalAlignment="Top" FontSize="16" />
+                    <Label Content="X:" HorizontalAlignment="Left" Margin="485,88,0,0" VerticalAlignment="Top" FontSize="16" />
+                    <Label Content="Y:" HorizontalAlignment="Left" Margin="485,121,0,0" VerticalAlignment="Top" FontSize="16" />
+                    <Label Content="Z:" HorizontalAlignment="Left" Margin="485,157,0,0" VerticalAlignment="Top" FontSize="16" />
 
                     <!--Result-->
-                    <Label Content="Result" HorizontalAlignment="Left" Margin="198,297,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="2"/>
-                    <RichTextBox Margin="141,333,317,10"
-                                 IsReadOnly="True" FontSize="16" Grid.Column="2">
+                    <Label Content="Result" HorizontalAlignment="Center" Margin="0,244,0,0" VerticalAlignment="Top" FontSize="16" />
+                    <RichTextBox Margin="0,280,0,0"
+                                 IsReadOnly="True" FontSize="16" >
                         <FlowDocument>
                             <Paragraph>
                                 <Run x:Name="richTextBoxAF" Text=""/>
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>
-                    <TextBox x:Name="textBoxAF1" HorizontalAlignment="Left" Margin="102,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" Grid.ColumnSpan="3"/>
-                    <TextBox x:Name="textBoxAF2" HorizontalAlignment="Left" Margin="102,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" Grid.ColumnSpan="3"/>
-                    <TextBox x:Name="textBoxAF3" HorizontalAlignment="Left" Margin="102,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" Grid.ColumnSpan="3"/>
-                    <TextBox x:Name="textBoxAF4" HorizontalAlignment="Left" Margin="349,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" Grid.Column="2"/>
-                    <TextBox x:Name="textBoxAF5" HorizontalAlignment="Left" Margin="349,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" Grid.Column="2"/>
-                    <TextBox x:Name="textBoxAF6" HorizontalAlignment="Left" Margin="349,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" Grid.Column="2"/>
+                    <TextBox x:Name="textBoxAF1" HorizontalAlignment="Left" Margin="159,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <TextBox x:Name="textBoxAF2" HorizontalAlignment="Left" Margin="159,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <TextBox x:Name="textBoxAF3" HorizontalAlignment="Left" Margin="159,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <TextBox x:Name="textBoxAF4" HorizontalAlignment="Left" Margin="508,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" />
+                    <TextBox x:Name="textBoxAF5" HorizontalAlignment="Left" Margin="508,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" />
+                    <TextBox x:Name="textBoxAF6" HorizontalAlignment="Left" Margin="508,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" />
                 </Grid>
             </TabItem>
             <TabItem Header="Mineshaft mirror">
