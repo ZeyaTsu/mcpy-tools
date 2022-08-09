@@ -50,9 +50,9 @@ def setpos():
     if y3 < 0:
         y3 = y3 * (-1)
     y3 += 1
-    
-    if y3 == 0:
-        y3 += 1    
+
+ #   if y3 == 0:
+  #      y3 += 1    
 
     if debugmode.debug == True:
 
@@ -69,5 +69,7 @@ def setpos():
             lo = False
         elif back == "r" or "res" or "restart":
             setpos()
+
+
 
 
