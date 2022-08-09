@@ -10,48 +10,68 @@
         MaxHeight="450" MaxWidth="800">
 
     <Grid>
-        <TabControl>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem x:Name="aboutMenuItem" Header="_About" Click="aboutMenuItem_Click"/>
+                    <MenuItem x:Name="closeMenuItem" Header="_Close" Click="closeMenuItem_Click"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <TabControl Margin="0,17,0,0">
             <TabItem Header="Area Block Counter">
                 <Grid Background="#FFE5E5E5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="75*"/>
-                        <ColumnDefinition Width="3*"/>
-                        <ColumnDefinition Width="319*"/>
-                    </Grid.ColumnDefinitions>
-                    <Button Content="Calculate" HorizontalAlignment="Left" Margin="186,224,0,0" VerticalAlignment="Top" Width="90" FontSize="16" Click="Button_Click" Grid.Column="2"/>
+                    <Button Content="Calculate" HorizontalAlignment="Center" Margin="0,214,0,0" VerticalAlignment="Top" Width="90" FontSize="16" Click="Button_Click"/>
 
                     <!--First Position-->
-                    <Label Content="First Position" HorizontalAlignment="Left" Margin="112,62,0,0" VerticalAlignment="Top" FontSize="16" Grid.ColumnSpan="3"/>
-                    <Label Content="X:" HorizontalAlignment="Left" Margin="74,88,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Label Content="Y:" HorizontalAlignment="Left" Margin="74,121,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Label Content="Z:" HorizontalAlignment="Left" Margin="74,157,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="First Position" HorizontalAlignment="Left" Margin="169,62,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="X:" HorizontalAlignment="Left" Margin="131,88,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Y:" HorizontalAlignment="Left" Margin="131,121,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Z:" HorizontalAlignment="Left" Margin="131,157,0,0" VerticalAlignment="Top" FontSize="16"/>
 
                     <!--Second Position-->
-                    <Label Content="Second Position" HorizontalAlignment="Left" Margin="348,62,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="2"/>
-                    <Label Content="X:" HorizontalAlignment="Left" Margin="326,88,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="2"/>
-                    <Label Content="Y:" HorizontalAlignment="Left" Margin="326,121,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="2"/>
-                    <Label Content="Z:" HorizontalAlignment="Left" Margin="326,157,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="2"/>
+                    <Label Content="Second Position" HorizontalAlignment="Left" Margin="507,62,0,0" VerticalAlignment="Top" FontSize="16" />
+                    <Label Content="X:" HorizontalAlignment="Left" Margin="485,88,0,0" VerticalAlignment="Top" FontSize="16" />
+                    <Label Content="Y:" HorizontalAlignment="Left" Margin="485,121,0,0" VerticalAlignment="Top" FontSize="16" />
+                    <Label Content="Z:" HorizontalAlignment="Left" Margin="485,157,0,0" VerticalAlignment="Top" FontSize="16" />
 
                     <!--Result-->
-                    <Label Content="Result" HorizontalAlignment="Left" Margin="198,297,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="2"/>
-                    <RichTextBox Margin="141,333,317,10"
-                                 IsReadOnly="True" FontSize="16" Grid.Column="2">
+                    <Label Content="Result" HorizontalAlignment="Center" Margin="0,244,0,0" VerticalAlignment="Top" FontSize="16" />
+                    <RichTextBox Margin="0,280,0,0"
+                                 IsReadOnly="True" FontSize="16" >
                         <FlowDocument>
                             <Paragraph>
                                 <Run x:Name="richTextBoxAF" Text=""/>
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>
-                    <TextBox x:Name="textBoxAF1" HorizontalAlignment="Left" Margin="102,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" Grid.ColumnSpan="3"/>
-                    <TextBox x:Name="textBoxAF2" HorizontalAlignment="Left" Margin="102,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" Grid.ColumnSpan="3"/>
-                    <TextBox x:Name="textBoxAF3" HorizontalAlignment="Left" Margin="102,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" Grid.ColumnSpan="3"/>
-                    <TextBox x:Name="textBoxAF4" HorizontalAlignment="Left" Margin="349,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" Grid.Column="2"/>
-                    <TextBox x:Name="textBoxAF5" HorizontalAlignment="Left" Margin="349,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" Grid.Column="2"/>
-                    <TextBox x:Name="textBoxAF6" HorizontalAlignment="Left" Margin="349,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" Grid.Column="2"/>
+                    <TextBox x:Name="textBoxAF1" HorizontalAlignment="Left" Margin="159,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <TextBox x:Name="textBoxAF2" HorizontalAlignment="Left" Margin="159,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <TextBox x:Name="textBoxAF3" HorizontalAlignment="Left" Margin="159,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <TextBox x:Name="textBoxAF4" HorizontalAlignment="Left" Margin="508,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" />
+                    <TextBox x:Name="textBoxAF5" HorizontalAlignment="Left" Margin="508,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" />
+                    <TextBox x:Name="textBoxAF6" HorizontalAlignment="Left" Margin="508,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" />
                 </Grid>
             </TabItem>
             <TabItem Header="Mineshaft mirror">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Coordinate:" HorizontalAlignment="Center" Margin="0,53,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="X:" HorizontalAlignment="Left" Margin="328,75,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Y:" HorizontalAlignment="Left" Margin="328,106,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Z:" HorizontalAlignment="Left" Margin="328,135,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:Name="textBoxMm1" HorizontalAlignment="Left" Margin="351,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95"/>
+                    <TextBox x:Name="textBoxMm2" HorizontalAlignment="Left" Margin="351,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95"/>
+                    <TextBox x:Name="textBoxMm3" HorizontalAlignment="Left" Margin="351,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95"/>
+                    <Button x:Name="buttonMm" Content="Search" HorizontalAlignment="Center" Margin="0,193,0,0" VerticalAlignment="Top" Width="70" FontSize="16" Click="buttonMm_Click"/>
+                    <RichTextBox Margin="0,223,0,0"
+                                 IsReadOnly="True">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run x:Name="richTextBoxMm" FontSize="16"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                </Grid>
             </TabItem>
             <TabItem Header="CanPlaceOn | CanDestroy">
                 <Grid Background="#FFE5E5E5">
@@ -144,15 +164,39 @@
                     </RichTextBox>
                 </Grid>
             </TabItem>
-            <TabItem Header="About">
+
+            <TabItem Header="Perimeter Calculation">
                 <Grid Background="#FFE5E5E5">
-                    <Image HorizontalAlignment="Left" Height="214" Margin="290,10,0,0" VerticalAlignment="Top" Width="226" Source="/mcpylogo.ico"/>
-                    <Label Content="MCPy Tools" HorizontalAlignment="Center" Margin="0,203,0,0" VerticalAlignment="Top" FontSize="22"/>
-                    <Label Content="Version: 1" HorizontalAlignment="Center" Margin="0,247,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Label Content="Original Creator: ZeyaTsu" HorizontalAlignment="Center" Margin="0,278,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Label Content="MCPy Tools GUI: v38armageddon" HorizontalAlignment="Center" Margin="0,309,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Label Content="This software is Open Source with the lincense: MIT" HorizontalAlignment="Center" Margin="0,340,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Button x:Name="aboutButton" Content="View on GitHub" HorizontalAlignment="Left" Margin="646,10,0,0" VerticalAlignment="Top" FontSize="16" Width="126" Click="aboutButton_Click"/>
+                    <Button x:Name="buttonPC" Content="Calculate" HorizontalAlignment="Center" Margin="0,223,0,0" VerticalAlignment="Top" Width="90" FontSize="16" Click="buttonPC_Click"/>
+
+                    <!--First Position-->
+                    <Label Content="First Position" HorizontalAlignment="Left" Margin="164,62,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="X:" HorizontalAlignment="Left" Margin="126,88,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Y:" HorizontalAlignment="Left" Margin="126,121,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Z:" HorizontalAlignment="Left" Margin="126,157,0,0" VerticalAlignment="Top" FontSize="16"/>
+
+                    <!--Second Position-->
+                    <Label Content="Second Position" HorizontalAlignment="Left" Margin="517,62,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="X:" HorizontalAlignment="Left" Margin="494,88,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Y:" HorizontalAlignment="Left" Margin="496,121,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Z:" HorizontalAlignment="Left" Margin="496,157,0,0" VerticalAlignment="Top" FontSize="16"/>
+
+                    <!--Result-->
+                    <Label Content="Result" HorizontalAlignment="Center" Margin="0,253,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <RichTextBox Margin="0,289,0,0"
+                                 IsReadOnly="True" FontSize="16">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run x:Name="richTextBoxPC" Text=""/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <TextBox x:Name="textBoxPC1" HorizontalAlignment="Left" Margin="154,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <TextBox x:Name="textBoxPC2" HorizontalAlignment="Left" Margin="154,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <TextBox x:Name="textBoxPC3" HorizontalAlignment="Left" Margin="154,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <TextBox x:Name="textBoxPC4" HorizontalAlignment="Left" Margin="518,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <TextBox x:Name="textBoxPC5" HorizontalAlignment="Left" Margin="518,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <TextBox x:Name="textBoxPC6" HorizontalAlignment="Left" Margin="518,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
                 </Grid>
             </TabItem>
         </TabControl>
