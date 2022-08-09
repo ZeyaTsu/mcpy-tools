@@ -10,7 +10,15 @@
         MaxHeight="450" MaxWidth="800">
 
     <Grid>
-        <TabControl>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem x:Name="aboutMenuItem" Header="_About" Click="aboutMenuItem_Click"/>
+                    <MenuItem x:Name="closeMenuItem" Header="_Close" Click="closeMenuItem_Click"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <TabControl Margin="0,17,0,0">
             <TabItem Header="Area Block Counter">
                 <Grid Background="#FFE5E5E5">
                     <Button Content="Calculate" HorizontalAlignment="Center" Margin="0,214,0,0" VerticalAlignment="Top" Width="90" FontSize="16" Click="Button_Click"/>
@@ -45,7 +53,7 @@
                     <TextBox x:Name="textBoxAF6" HorizontalAlignment="Left" Margin="508,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" />
                 </Grid>
             </TabItem>
-            <TabItem Header="Mineshaft mirror">
+            <TabItem Visibility="Collapsed" Header="Mineshaft mirror">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
             <TabItem Header="CanPlaceOn | CanDestroy">
@@ -172,18 +180,6 @@
                     <TextBox x:Name="textBoxPC4" HorizontalAlignment="Left" Margin="518,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
                     <TextBox x:Name="textBoxPC5" HorizontalAlignment="Left" Margin="518,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
                     <TextBox x:Name="textBoxPC6" HorizontalAlignment="Left" Margin="518,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
-                </Grid>
-            </TabItem>
-
-            <TabItem Header="About">
-                <Grid Background="#FFE5E5E5">
-                    <Image HorizontalAlignment="Left" Height="214" Margin="290,2,0,0" VerticalAlignment="Top" Width="226" Source="/mcpylogo.ico"/>
-                    <Label Content="MCPy Tools" HorizontalAlignment="Center" Margin="0,195,0,0" VerticalAlignment="Top" FontSize="22"/>
-                    <Label Content="Version: 1" HorizontalAlignment="Center" Margin="0,239,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Label Content="Original Creator: ZeyaTsu" HorizontalAlignment="Center" Margin="0,270,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Label Content="MCPy Tools GUI: v38armageddon" HorizontalAlignment="Center" Margin="0,301,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Label Content="This software is Open Source with the lincense: MIT" HorizontalAlignment="Center" Margin="0,332,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Button x:Name="aboutButton" Content="View on GitHub" HorizontalAlignment="Left" Margin="646,10,0,0" VerticalAlignment="Top" FontSize="16" Width="126" Click="aboutButton_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>

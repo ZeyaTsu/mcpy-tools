@@ -268,10 +268,15 @@ namespace MCPy_Tools_GUI
             richTextBoxPC.Text = per.ToString() + " Blocks";
         }
 
-        // About
-        private void aboutButton_Click(object sender, RoutedEventArgs e)
+        private void aboutMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/ZeyaTsu/mcpy-tools");
+            AboutWindow aboutWindow = new AboutWindow();
+            aboutWindow.ShowDialog();
+        }
+
+        private void closeMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
