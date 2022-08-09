@@ -268,6 +268,20 @@ namespace MCPy_Tools_GUI
             richTextBoxPC.Text = per.ToString() + " Blocks";
         }
 
+        // Mineshaft Mirror
+        private void buttonMm_Click(object sender, RoutedEventArgs e)
+        {
+            var x = Convert.ToInt32(textBoxMm1.Text);
+            var y = Convert.ToInt32(textBoxMm2.Text);
+            var z = Convert.ToInt32(textBoxMm3.Text);
+
+            var mine_x = x * -1;
+            var mine_z = z * -1;
+
+            richTextBoxMm.Text = "Mineshaft found!\nX: " + mine_x + "\nY: " + y +"\nZ: " + mine_z;
+        }
+        
+        // Other
         private void aboutMenuItem_Click(object sender, RoutedEventArgs e)
         {
             AboutWindow aboutWindow = new AboutWindow();

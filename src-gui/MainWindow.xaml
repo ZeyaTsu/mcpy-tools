@@ -53,8 +53,25 @@
                     <TextBox x:Name="textBoxAF6" HorizontalAlignment="Left" Margin="508,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" />
                 </Grid>
             </TabItem>
-            <TabItem Visibility="Collapsed" Header="Mineshaft mirror">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem Header="Mineshaft mirror">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Coordinate:" HorizontalAlignment="Center" Margin="0,53,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="X:" HorizontalAlignment="Left" Margin="328,75,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Y:" HorizontalAlignment="Left" Margin="328,106,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Z:" HorizontalAlignment="Left" Margin="328,135,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:Name="textBoxMm1" HorizontalAlignment="Left" Margin="351,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95"/>
+                    <TextBox x:Name="textBoxMm2" HorizontalAlignment="Left" Margin="351,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95"/>
+                    <TextBox x:Name="textBoxMm3" HorizontalAlignment="Left" Margin="351,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95"/>
+                    <Button x:Name="buttonMm" Content="Search" HorizontalAlignment="Center" Margin="0,193,0,0" VerticalAlignment="Top" Width="70" FontSize="16" Click="buttonMm_Click"/>
+                    <RichTextBox Margin="0,223,0,0"
+                                 IsReadOnly="True">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run x:Name="richTextBoxMm" FontSize="16"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                </Grid>
             </TabItem>
             <TabItem Header="CanPlaceOn | CanDestroy">
                 <Grid Background="#FFE5E5E5">
