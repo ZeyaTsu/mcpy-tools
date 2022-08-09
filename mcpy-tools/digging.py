@@ -71,5 +71,3 @@ def setpos():
             setpos()
 
 
-
-

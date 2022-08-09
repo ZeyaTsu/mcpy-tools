@@ -111,4 +111,3 @@ def choix():
         elif ca == "r" or "res" or "restart":
             all()
             w = False
-
