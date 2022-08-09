@@ -199,6 +199,31 @@
                     <TextBox x:Name="textBoxPC6" HorizontalAlignment="Left" Margin="518,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
                 </Grid>
             </TabItem>
+
+            <TabItem Header="[TITLE]">
+                <Grid Background="#FFE5E5E5">
+                    <ComboBox x:Name="dum5" HorizontalAlignment="Left" Margin="580,50,0,0" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <TextBox x:Name="dum4" HorizontalAlignment="Left" Margin="126,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <TextBox x:Name="dum3" HorizontalAlignment="Left" Margin="126,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <Label Content="Facing:" HorizontalAlignment="Left" Margin="611,19,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Angle 1:" HorizontalAlignment="Left" Margin="152,19,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Angle 2:" HorizontalAlignment="Left" Margin="152,182,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Button x:Name="dum2" Content="Calculate Result" HorizontalAlignment="Left" Margin="565,217,0,0" VerticalAlignment="Top" FontSize="16" Width="150" Click="buttonSF2_Click"/>
+                    <Rectangle HorizontalAlignment="Center" Height="1" Margin="0,144,0,0" Stroke="Black" VerticalAlignment="Top" Width="794"/>
+                    <Rectangle HorizontalAlignment="Center" Height="1" Margin="0,288,0,0" Stroke="Black" VerticalAlignment="Top" Width="794"/>
+                    <RichTextBox Margin="0,294,0,0"
+                                 IsReadOnly="True">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run x:Name="dum1" Text="" FontSize="16"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <Label Content="Note: Go to X: 0, Z: 0 and have 2 ender eyes" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Note: Go to X: 0, Z: -310 for North | X: -310, Z: 0 for West" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Note: Go to X: 0, Z: 310 for South | X: 310, Z: 0 for East" HorizontalAlignment="Center" Margin="0,172,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>
