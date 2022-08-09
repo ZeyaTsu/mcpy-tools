@@ -8,6 +8,7 @@ import strongholdfinder
 import level
 import chunkcal
 import wall
+import mineshaft
 
 import colorama
 from colorama import Fore, Back, Style
@@ -50,6 +51,9 @@ def menu():
 
         elif choice == "1":
             digging.setpos()
+            break
+        elif choice == "2":
+            mineshaft.mineshaft()
             break
         elif choice == "3":
             canplacedestroy.choix()
