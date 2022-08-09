@@ -40,3 +40,4 @@ def choix():
         elif ca == "r" or "res" or "restart":
             mineshaft()
             w = False
+
