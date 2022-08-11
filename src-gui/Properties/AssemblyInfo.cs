@@ -8,7 +8,7 @@ using System.Windows;
 // l'ensemble d'attributs suivant. Pour modifier les informations
 // associées à un assembly.
 [assembly: AssemblyTitle("MCPy Tools")]
-[assembly: AssemblyDescription("Minecraft Tools. You can find useful tools such as Block Counter for areas, Commands generator and more.")]
+[assembly: AssemblyDescription("Minecraft Tools using Python. You can find useful tools such as Block Counter for areas, Commands generator, Stronghold finder and more.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("ZeyaTsu, v38armageddon")]
 [assembly: AssemblyProduct("MCPy Tools")]

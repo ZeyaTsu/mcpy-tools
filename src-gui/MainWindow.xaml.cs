@@ -302,11 +302,11 @@ namespace MCPy_Tools_GUI
             
             double v = 0;
             
-            if (comboBoxDC.Text == "Elytra")
+            if (comboBoxDC.Text == "Run")
             {
                 v = 5.6;
             }
-            else if (comboBoxDC.Text == "Run")
+            else if (comboBoxDC.Text == "Elytra")
             {
                 v = 7.2;
             }
