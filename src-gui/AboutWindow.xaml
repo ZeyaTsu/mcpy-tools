@@ -7,11 +7,13 @@
         mc:Ignorable="d"
         Title="About MCPy Tools" Height="520" Width="422"
         MinHeight="520" MinWidth="422"
-        MaxHeight="520" MaxWidth="422">
+        MaxHeight="520" MaxWidth="422"
+        WindowStartupLocation="CenterScreen">
+    
     <Grid Background="#FFE5E5E5">
         <Image HorizontalAlignment="Left" Height="214"  VerticalAlignment="Top" Width="226" Source="/mcpylogo.ico" Margin="104,1,0,0"/>
         <Label Content="MCPy Tools" HorizontalAlignment="Center" Margin="0,195,0,0" VerticalAlignment="Top" FontSize="22"/>
-        <Label Content="Version: 1" HorizontalAlignment="Center" Margin="0,239,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Version: 1.3" HorizontalAlignment="Center" Margin="0,239,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Label Content="Original Creator: ZeyaTsu" HorizontalAlignment="Center" Margin="0,270,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Label Content="MCPy Tools GUI: v38armageddon" HorizontalAlignment="Center" Margin="0,301,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Label Content="This software is Open Source with the license: MIT" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" Margin="0,445,0,0"/>
