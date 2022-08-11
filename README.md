@@ -10,6 +10,7 @@
 * Best Y Level - List of all best Y levels for ores.
 * Blocks/Chunk converter - Convert chunks to blocks & vice versa
 * Perimeter Calculation
+* Distance Calculation
 
 ## Command generator
 * CanPlaceOn & CanDestroy - Command generator to give item that can destroy/be placed on specific block.
