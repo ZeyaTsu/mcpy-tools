@@ -9,6 +9,7 @@ import level
 import chunkcal
 import wall
 import mineshaft
+import distance
 
 import colorama
 from colorama import Fore, Back, Style
@@ -34,6 +35,7 @@ def menu():
     print(b + "5. Best Y Level - List of all best Y levels for ores.")# check
     print(b + "6. Blocks/Chunk converter - Conert chunks to blocks & vice versa.")# check
     print(b + "7. Perimeter Calculation")
+    print(b + "8. Distance calculation - Calculate how long the travel is and what's the distance.")
 
     print(c + "Write 'list' to open this list.")
     
@@ -70,7 +72,9 @@ def menu():
         elif choice == "7":
             wall.perimeter()
             break
+        elif choice == "8":
+            distance.method()
+            break
 
         
-
 
