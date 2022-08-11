@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Title="About MCPy Tools" Height="520" Width="422"
         MinHeight="520" MinWidth="422"
-        MaxHeight="520" MaxWidth="422">
+        MaxHeight="520" MaxWidth="422"
+        WindowStartupLocation="CenterScreen">
+    
     <Grid Background="#FFE5E5E5">
         <Image HorizontalAlignment="Left" Height="214"  VerticalAlignment="Top" Width="226" Source="/mcpylogo.ico" Margin="104,1,0,0"/>
         <Label Content="MCPy Tools" HorizontalAlignment="Center" Margin="0,195,0,0" VerticalAlignment="Top" FontSize="22"/>

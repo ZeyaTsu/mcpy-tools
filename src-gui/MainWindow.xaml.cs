@@ -276,7 +276,51 @@ namespace MCPy_Tools_GUI
 
             richTextBoxMm.Text = "Mineshaft found!\nX: " + mine_x + "\nY: " + y +"\nZ: " + mine_z;
         }
-        
+
+        // Distance calculation
+        private void buttonDC_Click(object sender, RoutedEventArgs e)
+        {
+            var x = Convert.ToInt32(textBoxDC1.Text);
+            var z = Convert.ToInt32(textBoxDC2.Text);
+            var x2 = Convert.ToInt32(textBoxDC3.Text);
+            var z2 = Convert.ToInt32(textBoxDC4.Text);
+
+            var x3 = x - x2;
+            var z3 = z - z2;
+
+            if (x3 < 0)
+            {
+                x3 = x3 * -1;
+            }
+            x3 += 1;
+
+            if (z3 < 0)
+            {
+                z3 = z3 * -1;
+            }
+            z3 += 1;
+            
+            double v = 0;
+            
+            if (comboBoxDC.Text == "Elytra")
+            {
+                v = 5.6;
+            }
+            else if (comboBoxDC.Text == "Run")
+            {
+                v = 7.2;
+            }
+
+            var distance = Math.Sqrt(Math.Pow(x3 - 2, 2) + Math.Pow(z3 - 2, 2));
+            var t = distance / v;
+
+            richTextBoxDC.Text = "From X: " + x + " Z: " + z + Environment.NewLine +
+                "To X: " + x2 + " Z: " + z2 + Environment.NewLine + Environment.NewLine
+                + "Distance: around " + Convert.ToInt32(distance) + " Blocks" + Environment.NewLine +
+                "Duration: " + Convert.ToInt32(t) + " seconds" + Environment.NewLine +
+                "               " + Convert.ToInt32(t) / 60 + " minutes";
+        }
+
         // Other
         private void aboutMenuItem_Click(object sender, RoutedEventArgs e)
         {
