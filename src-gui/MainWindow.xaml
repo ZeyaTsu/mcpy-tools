@@ -56,12 +56,12 @@
             <TabItem Header="Mineshaft mirror">
                 <Grid Background="#FFE5E5E5">
                     <Label Content="Coordinate:" HorizontalAlignment="Center" Margin="0,53,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Label Content="X:" HorizontalAlignment="Left" Margin="328,75,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Label Content="Y:" HorizontalAlignment="Left" Margin="328,106,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Label Content="Z:" HorizontalAlignment="Left" Margin="328,135,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <TextBox x:Name="textBoxMm1" HorizontalAlignment="Left" Margin="351,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95"/>
-                    <TextBox x:Name="textBoxMm2" HorizontalAlignment="Left" Margin="351,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95"/>
-                    <TextBox x:Name="textBoxMm3" HorizontalAlignment="Left" Margin="351,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95"/>
+                    <Label Content="X:" HorizontalAlignment="Left" Margin="316,75,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Y:" HorizontalAlignment="Left" Margin="316,106,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Z:" HorizontalAlignment="Left" Margin="316,135,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:Name="textBoxMm1" HorizontalAlignment="Left" Margin="344,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109"/>
+                    <TextBox x:Name="textBoxMm2" HorizontalAlignment="Left" Margin="344,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109"/>
+                    <TextBox x:Name="textBoxMm3" HorizontalAlignment="Left" Margin="344,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109"/>
                     <Button x:Name="buttonMm" Content="Search" HorizontalAlignment="Center" Margin="0,193,0,0" VerticalAlignment="Top" Width="70" FontSize="16" Click="buttonMm_Click"/>
                     <RichTextBox Margin="0,223,0,0"
                                  IsReadOnly="True">
@@ -93,7 +93,12 @@
             </TabItem>
             <TabItem Header="Stronghold Finder">
                 <Grid Background="#FFE5E5E5">
-                    <ComboBox x:Name="comboBoxSF" HorizontalAlignment="Left" Margin="580,50,0,0" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <ComboBox x:Name="comboBoxSF" HorizontalAlignment="Left" Margin="580,50,0,0" VerticalAlignment="Top" Width="120" FontSize="16">
+                        <ComboBoxItem Content="North"/>
+                        <ComboBoxItem Content="South"/>
+                        <ComboBoxItem Content="West"/>
+                        <ComboBoxItem Content="East"/>
+                    </ComboBox>
                     <TextBox x:Name="textBoxSF1" HorizontalAlignment="Left" Margin="126,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
                     <TextBox x:Name="textBoxSF2" HorizontalAlignment="Left" Margin="126,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
                     <Label Content="Facing:" HorizontalAlignment="Left" Margin="611,19,0,0" VerticalAlignment="Top" FontSize="16"/>
@@ -200,15 +205,20 @@
                 </Grid>
             </TabItem>
 
-            <TabItem Header="[TITLE]">
+            <TabItem Header="Distance calculation">
                 <Grid Background="#FFE5E5E5">
-                    <ComboBox x:Name="dum5" HorizontalAlignment="Left" Margin="580,50,0,0" VerticalAlignment="Top" Width="120" FontSize="16"/>
-                    <TextBox x:Name="dum4" HorizontalAlignment="Left" Margin="126,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
-                    <TextBox x:Name="dum3" HorizontalAlignment="Left" Margin="126,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
-                    <Label Content="Facing:" HorizontalAlignment="Left" Margin="611,19,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Label Content="Angle 1:" HorizontalAlignment="Left" Margin="152,19,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Label Content="Angle 2:" HorizontalAlignment="Left" Margin="152,182,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Button x:Name="dum2" Content="Calculate Result" HorizontalAlignment="Left" Margin="565,217,0,0" VerticalAlignment="Top" FontSize="16" Width="150" Click="buttonSF2_Click"/>
+                    <ComboBox x:Name="comboBoxDC" HorizontalAlignment="Left" Margin="580,50,0,0" VerticalAlignment="Top" Width="120" FontSize="16">
+                        <ComboBoxItem Content="Elytra"/>
+                        <ComboBoxItem Content="Run"/>
+                    </ComboBox>
+                    <TextBox x:Name="textBoxDC1" HorizontalAlignment="Left" Margin="126,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <TextBox x:Name="textBoxDC2" HorizontalAlignment="Left" Margin="126,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <TextBox x:Name="textBoxDC3" HorizontalAlignment="Left" Margin="126,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <TextBox x:Name="textBoxDC4" HorizontalAlignment="Left" Margin="126,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+                    <Label Content="Method:" HorizontalAlignment="Left" Margin="605,19,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Distance 1:" HorizontalAlignment="Left" Margin="143,10,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Distance 2:" HorizontalAlignment="Left" Margin="143,153,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Button x:Name="buttonDC" Content="Calculate Distance" HorizontalAlignment="Left" Margin="565,217,0,0" VerticalAlignment="Top" FontSize="16" Width="150" Click="buttonSF2_Click"/>
                     <Rectangle HorizontalAlignment="Center" Height="1" Margin="0,144,0,0" Stroke="Black" VerticalAlignment="Top" Width="794"/>
                     <Rectangle HorizontalAlignment="Center" Height="1" Margin="0,288,0,0" Stroke="Black" VerticalAlignment="Top" Width="794"/>
                     <RichTextBox Margin="0,294,0,0"
@@ -219,9 +229,10 @@
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>
-                    <Label Content="Note: Go to X: 0, Z: 0 and have 2 ender eyes" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Note: Go to X: 0, Z: -310 for North | X: -310, Z: 0 for West" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Note: Go to X: 0, Z: 310 for South | X: 310, Z: 0 for East" HorizontalAlignment="Center" Margin="0,172,0,0" VerticalAlignment="Top"/>
+                    <Label Content="X:" HorizontalAlignment="Left" Margin="101,42,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Z:" HorizontalAlignment="Left" Margin="101,70,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="X:" HorizontalAlignment="Left" Margin="101,185,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Z:" HorizontalAlignment="Left" Margin="101,213,0,0" VerticalAlignment="Top" FontSize="16"/>
                 </Grid>
             </TabItem>
         </TabControl>

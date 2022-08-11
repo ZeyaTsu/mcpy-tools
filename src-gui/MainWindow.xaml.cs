@@ -37,10 +37,6 @@ namespace MCPy_Tools_GUI
             netherRichTextBox.Text = bestYTextNether;
 
             // Init Stronghold Finder
-            comboBoxSF.Items.Add("North");
-            comboBoxSF.Items.Add("South");
-            comboBoxSF.Items.Add("West");
-            comboBoxSF.Items.Add("East");
             comboBoxSF.SelectedItem = "North";
 
             // CanPlaceOn | CanDestroy
