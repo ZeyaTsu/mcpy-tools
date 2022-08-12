@@ -26,4 +26,4 @@
 ## Support
 * https://discord.gg/7yCaDETDE3
 
-### Version 1.2
+### Version 1.3
