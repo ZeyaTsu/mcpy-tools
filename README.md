@@ -16,8 +16,8 @@
 * CanPlaceOn & CanDestroy - Command generator to give item that can destroy/be placed on specific block.
 
 ## Debug Mode (Works in experimental mode)
-* Write 'debug' to start a debug mode.
-* 's-d' to stop it.
+* `Write 'debug' to start a debug mode.`
+* `'s-d' to stop it.`
 
 # Credits
 ## Experimental Mode (backend python code) - ZeyaTsu
