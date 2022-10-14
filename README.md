@@ -21,9 +21,8 @@
 
 # Credits
 ## Experimental Mode (backend python code) - ZeyaTsu
+## MCPy - C version - ZeyaTsu
 ## GUI in C# for MCPy-Tools - v38armageddon
 
-## Support
-* https://discord.gg/7yCaDETDE3
 
 ### Version 1.3
